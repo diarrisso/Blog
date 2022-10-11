@@ -16,7 +16,7 @@ class PostsRepository
     /**
      * @return array|false
      */
-    function fetchPosts()
+    public function fetchPosts()
     {
        $stmt =  $this->pdo->query('SELECT * FROM Blog.plats');
 
@@ -26,21 +26,15 @@ class PostsRepository
     }
 
     /**
-     * @param $titre
+     * @param $id
      * @return PostModel
      */
-    function fetchPost($id)
+    public function fetchPost($id)
     {
         $stmt  = $this->pdo->prepare("SELECT * FROM Blog.plats WHERE plats.id= :id");
         $stmt->execute(["id" => $id]);
         $stmt->setFetchMode(PDO::FETCH_CLASS, "App\\post\\PostModel");
         $post =  $stmt->fetch(PDO::FETCH_CLASS);
-
-/*
-        $post = new PostModel();
-        $post->id = $postArray['id'];
-        $post->titre = $postArray['titre'];
-        $post->content = $postArray['content'];*/
         return $post;
 
     }

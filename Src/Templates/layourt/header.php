@@ -1,4 +1,4 @@
-<?php require "../init.php";?>
+<?php require  __DIR__. "/../../../init.php";?>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -18,11 +18,11 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#">Recette</a>
-            <a class="nav-link" href="#">Plats</a>
-            <a class="nav-link ">Contact</a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link active text-white" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-white" href="post">Recette</a>
+            <a class="nav-link text-white" href="#">Plats</a>
+            <a class="nav-link text-white " href="/contact">Contact</a>
         </div>
     </div>
 </nav>

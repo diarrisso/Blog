@@ -1,20 +1,18 @@
+<?php require __DIR__ .  "./../layourt/header.php";?>
 
-<?php include "./element/header.php";?>
-<div class="container">
+    <div class="container">
 
-    <h1> Description de la recette </h1>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-titre"> <?php echo $postContent['titre'];?> </h3>
+        <div class="clearfix">
+            <img src="http://localhost/Blog/src/Templates/img/plat.jpeg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+            <h3 class="panel-titre"> <?php echo $postContent->getTitre();?> </h3>
+            <p>
+                <?php echo  nl2br( $postContent->getContent());?>
+            </p>
+
         </div>
-        <div class="panel-body">
-            <?php echo  nl2br( $postContent['content']);?>
 
-        </div>
 
     </div>
 
 
-</div>
-
-<?php include "./element/footer.php";?>
+<?php require_once __DIR__ .  "./../layourt/footer.php";?>

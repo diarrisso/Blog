@@ -47,21 +47,3 @@ spl_autoload_register(function ($class) {
 
 
 
-
-
-
-
-
-
-
-
-
-/*
-function autoload($clasName)
-{
-    if (file_exists("./Src/{$clasName}.php"))
-    {
-        require "./Src/{$clasName}.php";
-    }
-}
-spl_autoload_register("autoload");*/

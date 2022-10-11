@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<?php require __DIR__ .  "/layourt/header.php";?>
+
+<?php
+/* @var string $title */
+?>
+
+<h1> <?php  echo $title ;?></h1>
+
+<div> Add Your First Handler as Above</div>
+
+
+<pre>
+  <code lang="php">
+
+
+$router->get('/', function (){
+    echo "Home Pages ";
+});
+
+  </code>
+
+
+
+</pre>
+<?php require __DIR__ .  "/layourt/footer.php";?>

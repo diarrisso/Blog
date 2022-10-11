@@ -1,27 +1,20 @@
-
-<?php include "./element/header.php";?>
-
+<?php require_once __DIR__ .  "./../layourt/header.php";?>
 
 <div class="container">
-
     <div class="row">
-        <?php foreach ($post as $posts):?>
-        <div class="col-sm">
-            <h3>
-                <a href="post.php?id=<?php echo $posts->id;?>">
-                   <img src="./../../../img/module_table_bottom.png">
-                    <?php echo  $posts['titre'];?>
+        <?php foreach ($post as $value):?>
+            <div class="col-12 col-md-4">
+                <a href="/post?id=<?= $value->getId()?>">
+                    <img src="http://localhost/Blog/src/Templates/img/plat.jpeg" alt="cuisine
+                 " width="300px" height="200px" class="mt-4">
                 </a>
-            </h3>
-
-        </div>
-        <?php endforeach; ?>
-
+                <h3><?php echo $value->getTitre()?></h3>
+                <p>
+                    <?php echo nl2br($value->getContent());?>
+                </p>
+            </div>
+        <?php endforeach;?>
     </div>
-
 </div>
 
-
-
-
-<?php include "./element/footer.php";?>
+<?php require_once __DIR__ .  "./../layourt/footer.php";?>
