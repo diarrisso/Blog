@@ -22,6 +22,20 @@ $router->get('/post', function( array  $params){
     //echo '<h1> Hello ' . $params['username'] . '</h1>';
 });
 
+
+$router->get('/login', function( array  $params){
+
+    $container = new \App\Core\Container();
+    $postShow = $container->make('postController');
+    $postShow->login();
+    //echo "salut about";
+    //echo '<h1> Hello ' . $params['username'] . '</h1>';
+});
+
+
+
+
+
 $router->get('/contact', Contact::class . '::execute');
 $router->post('/contact', function ($paramet)
 {

@@ -38,4 +38,13 @@ class PostController
        ]);
     }
 
+    public function login()
+    {
+
+
+        $this->render("Login/login",[]);
+    }
+
+
+
 }
